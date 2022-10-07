@@ -9,8 +9,8 @@ pipeline {
           
   parameters {
 
-    string(description: 'List of recipients to send email report', name: 'recipients', defaultValue: 'pramod@square-bits.com')
-    string(description: 'repo branch_name', name: 'branch_name', defaultValue: 'eks-infra')
+    string(description: 'List of recipients to send email report', name: 'recipients', defaultValue: 'devopspramod100@gmail.com')
+    string(description: 'repo branch_name', name: 'branch_name', defaultValue: 'main')
 
     
     string(name: 'Bucket_name' ,description: 'Bucket name, to store tfstate files', defaultValue: 'bucket-name')
@@ -24,16 +24,16 @@ pipeline {
     string(name: 'TF_VAR_eks_cluster_name' ,defaultValue: 'mito-cluster-development')
     string(name: 'TF_VAR_environment' ,defaultValue: 'dev')
     
-    string(name: 'TF_VAR_desired_size' ,defaultValue: '5')
+    string(name: 'TF_VAR_desired_size' ,defaultValue: '3')
     string(name: 'TF_VAR_max_size' ,defaultValue: '7')
-    string(name: 'TF_VAR_min_size' ,defaultValue: '5')
+    string(name: 'TF_VAR_min_size' ,defaultValue: '3')
     string(name: 'TF_VAR_max_unavailable' ,defaultValue: '2')
     
     string(name: 'TF_VAR_instance_type' ,defaultValue: 'm5.large')
 
     string(name: 'TF_VAR_ami_id' ,defaultValue: 'ami-0e1b6f116a3733fef')
     
-    string(name: 'TF_VAR_vpc_id' ,defaultValue: 'vpc-0d6b2fc805aea1e63')
+    string(name: 'TF_VAR_vpc_id' ,defaultValue: 'vpc-')
     
     string(name: 'TF_VAR_region' ,defaultValue: 'us-east-1')
     
@@ -45,7 +45,7 @@ pipeline {
     
     string(name: 'TF_VAR_aws_lb_target_group_name' ,defaultValue: 'mito-cluster-eks-tg')
            
-    string(name: 'aws_lb_internal_443_target_group_protcol', description: 'value can be TCP or TLS' ,defaultValue: 'TLS')
+    string(name: 'aws_lb_internal_443_target_group_protcol', description: 'value can be TCP or TLS' ,defaultValue: 'TCP')
            
     
     string(name: 'TF_VAR_EKS_ClusterAutoscalarPolicyName' ,defaultValue: 'AmazonEKSClusterAutoscalerPolicy')// existing policy
