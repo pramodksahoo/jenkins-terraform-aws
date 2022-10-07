@@ -1,0 +1,4 @@
+terraform/terraform/.terraform
+human-edge-cognito/node_modules
+human-edge-cognito/packages/backend/node_modules
+human-edge-cognito/packages/frontend/node_modules
